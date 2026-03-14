@@ -23,16 +23,17 @@ def detector():
 
 
     esubject = str(input('Enter the email subject line:'))
+    subject = esubject.lower()
 
     print('SECURITY ASSESSMENT:')
    
-    if 'urgent' in  esubject.lower or 'immediate action required' in esubject.lower():
+    if 'urgent' in  subject or 'immediate action required' in subject:
         print('HIGH RISK: Possible phishing attempt.')
 
-    elif 'win' in  esubject.lower or 'free' in esubject.lower():
+    elif 'win' in  subject or 'free' in subject:
         print('MEDIUM RISK: Suspicious offer detected.')
 
-    elif 'password reset' in esubject.lower():
+    elif 'password reset' in subject:
         print('LOW RISK: Verify legitimacy with sender.')
 
     else:
