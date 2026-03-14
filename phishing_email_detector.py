@@ -26,10 +26,10 @@ def detector():
 
     print('SECURITY ASSESSMENT:')
    
-    if 'urgent' or 'immediate action required' in esubject.lower():
+    if 'urgent' in  esubject.lower or 'immediate action required' in esubject.lower():
         print('HIGH RISK: Possible phishing attempt.')
 
-    elif 'win' or 'free' in esubject.lower():
+    elif 'win' in  esubject.lower or 'free' in esubject.lower():
         print('MEDIUM RISK: Suspicious offer detected.')
 
     elif 'password reset' in esubject.lower():
